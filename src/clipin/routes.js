@@ -1,0 +1,25 @@
+export const CLIPIN_ROUTES = [
+  { path: '/onboarding', key: 'onboarding' },
+  { path: '/login', key: 'login' },
+  { path: '/signup', key: 'signup' },
+  { path: '/', key: 'hub' },
+  { path: '/app/clipmaker', key: 'clipmaker' },
+  { path: '/app/clipmaker/results', key: 'clipmaker-results' },
+  { path: '/app/ideate', key: 'ideate' },
+  { path: '/app/hooks', key: 'hooks' },
+  { path: '/app/script/write', key: 'script-write' },
+  { path: '/app/script/outline', key: 'script-outline' },
+  { path: '/app/script/rewrite', key: 'script-rewrite' },
+  { path: '/app/optimise/title', key: 'optimise-title' },
+  { path: '/app/optimise/description', key: 'optimise-description' },
+  { path: '/app/optimise/chapters', key: 'optimise-chapters' },
+  { path: '/app/optimise/tags', key: 'optimise-tags' },
+  { path: '/app/monetise', key: 'monetise' },
+  { path: '/app/deals', key: 'deals' },
+  { path: '/app/schedule', key: 'schedule' },
+  { path: '/app/history', key: 'history' },
+  { path: '/app/analytics', key: 'analytics' },
+  { path: '/app/more', key: 'more' },
+];
+
+export default CLIPIN_ROUTES;
