@@ -1,0 +1,102 @@
+:root {
+  --clipin-bg: #FAF1EB;
+  --clipin-primary: #613223;
+  --clipin-accent: #FED455;
+  --clipin-blue: #84C4EC;
+  --clipin-red: #E22733;
+  --clipin-orange: #E7730D;
+  --clipin-white: #FFFFFF;
+  --clipin-ink: #412015;
+  --clipin-soft: #F8EBE2;
+
+  --clipin-container-max: 1180px;
+  --clipin-page-gutter: 30px;
+  --clipin-section-gap: 64px;
+  --clipin-grid-gap: 24px;
+
+  --clipin-radius-card: 25px;
+  --clipin-radius-pill: 9999px;
+  --clipin-radius-organic: 120px;
+
+  --clipin-shadow-halo: 0 0 0 10px rgba(254, 212, 85, .22);
+  --clipin-shadow-halo-sm: 0 0 0 5px rgba(254, 212, 85, .22);
+
+  --clipin-motion-fast: 200ms;
+  --clipin-motion-default: 300ms;
+  --clipin-motion-slow: 400ms;
+  --clipin-motion-ease: ease;
+}
+
+.clipin-page {
+  min-height: 100vh;
+  background: var(--clipin-bg);
+  color: var(--clipin-primary);
+}
+
+.clipin-container {
+  width: min(calc(100% - (var(--clipin-page-gutter) * 2)), var(--clipin-container-max));
+  margin-inline: auto;
+}
+
+.clipin-card {
+  border-radius: var(--clipin-radius-card);
+  background: var(--clipin-white);
+}
+
+.clipin-pill {
+  border-radius: var(--clipin-radius-pill);
+}
+
+.clipin-organic-media {
+  border-radius: 0 var(--clipin-radius-organic) 0 var(--clipin-radius-organic);
+}
+
+.clipin-focus:focus-visible {
+  outline: 3px solid var(--clipin-accent);
+  outline-offset: 3px;
+}
+
+.clipin-transition-visible,
+.clipin-transition-hidden {
+  transition: opacity var(--clipin-motion-default) var(--clipin-motion-ease),
+    transform var(--clipin-motion-default) var(--clipin-motion-ease),
+    visibility var(--clipin-motion-default) var(--clipin-motion-ease);
+}
+
+.clipin-transition-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.clipin-transition-hidden {
+  opacity: 0;
+  transform: translateY(-8px);
+  visibility: hidden;
+}
+
+.clipin-featured {
+  box-shadow: var(--clipin-shadow-halo);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --clipin-page-gutter: 20px;
+    --clipin-section-gap: 40px;
+  }
+
+  .clipin-organic-media {
+    border-radius: 0 60px 0 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
